@@ -25,17 +25,24 @@ class TableDifferentViewController: UIViewController,UITableViewDelegate, UITabl
         
         cell.lblName.text = task.taskName
         cell.lblGenre.text = task.date
+        cell.lblPriority.text = task.priority?.capitalized
         
         if(task.priority! == "low"){
-            cell.backgroundColor = .green
+            
+            cell.lblPriority.backgroundColor = .green
+            //cell.backgroundColor = .green
         }
         
         else if(task.priority! == "medium"){
-            cell.backgroundColor = .yellow
+            
+            cell.lblPriority.backgroundColor = .yellow
+            //cell.backgroundColor = .yellow
         }
         
         else if(task.priority! == "high"){
-            cell.backgroundColor = .cyan
+            
+            cell.lblPriority.backgroundColor = .red
+            //cell.backgroundColor = .cyan
         }
         
         return cell
@@ -53,6 +60,7 @@ class TableDifferentViewController: UIViewController,UITableViewDelegate, UITabl
     
     var refTasks : DatabaseReference!
     var tasksList = [MyModel]()
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -132,6 +140,8 @@ class TableDifferentViewController: UIViewController,UITableViewDelegate, UITabl
                     }
                     
                 }
+                
+                self.tasksList = self.tasksList.reversed()
                 
                 self.tblMyTask.reloadData()
             }

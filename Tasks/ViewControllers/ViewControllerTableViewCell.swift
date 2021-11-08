@@ -11,6 +11,7 @@ class ViewControllerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblGenre: UILabel!
+    @IBOutlet weak var lblPriority: UILabel!
     
     
     override func awakeFromNib() {
