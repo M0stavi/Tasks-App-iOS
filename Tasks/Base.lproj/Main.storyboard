@@ -351,11 +351,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-rb-8pV">
-                                <rect key="frame" x="20" y="495" width="374" height="108"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkz-vC-94E">
                                 <rect key="frame" x="20" y="452" width="89" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -387,16 +382,21 @@
                                     <action selector="btn_add_task_add:" destination="aM8-Oo-12F" eventType="touchUpInside" id="GZi-qg-ND1"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nx4-Wl-EKh">
+                                <rect key="frame" x="20" y="517" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yPT-vy-FpQ"/>
                         <color key="backgroundColor" red="0.1831039488" green="0.52619636059999997" blue="0.65153634549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Task" id="gLS-5p-4QP"/>
                     <connections>
-                        <outlet property="picker_add_task_date" destination="gJy-rb-8pV" id="sOA-Je-Wfo"/>
-                        <outlet property="picker_add_task_prio" destination="YRn-AX-t5R" id="8Co-k7-Ng7"/>
-                        <outlet property="picker_add_task_priority" destination="YRn-AX-t5R" id="GwH-L8-SeB"/>
+                        <outlet property="picker_priority" destination="YRn-AX-t5R" id="YOG-aw-BZy"/>
                         <outlet property="txt_field_add_task_name" destination="Srs-Qv-m96" id="asw-F0-9Qv"/>
+                        <outlet property="txt_field_datepicker" destination="Nx4-Wl-EKh" id="fXP-1R-AqM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Taq-W3-4sV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

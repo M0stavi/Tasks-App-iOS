@@ -10,6 +10,7 @@ import Firebase
 
 class AddTaskViewController: UIViewController {
     
+    
     var refTasks: DatabaseReference!
 
     override func viewDidLoad() {
@@ -17,16 +18,22 @@ class AddTaskViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         refTasks = Database.database().reference().child("tasks")
+        picker_priority.dataSource = self
+        picker_priority.delegate = self
+        createDatePicker()
     }
     
     let priorities = ["Low", "Medium", "High"]
     
     @IBOutlet weak var txt_field_add_task_name: UITextField!
     
-    @IBOutlet weak var picker_add_task_date: UIDatePicker!
+    @IBOutlet weak var txt_field_datepicker: UITextField!
     
-    @IBOutlet weak var picker_add_task_prio: UIPickerView!
-    @IBOutlet weak var picker_add_task_priority: UIPickerView!
+    
+    let datePicker = UIDatePicker()
+    var priority_selected: String?
+    
+    @IBOutlet weak var picker_priority: UIPickerView!
     
     @IBAction func btn_add_task_add(_ sender: UIButton) {
         
@@ -43,14 +50,56 @@ class AddTaskViewController: UIViewController {
         let key2 = refTasks.childByAutoId().key
         let task = ["id": Constants.Storyboard.key,
                     "taskName": txt_field_add_task_name.text! as String,
-                    "date": "singer",
-                    "priority": "high",
+                    "date": txt_field_datepicker.text! as String,
+                    "priority": priority_selected! as String,
                     "identifier": key2
                    ]
         refTasks.child(key2!).setValue(task)
         
+        print(task)
+        
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        priority_selected = priorities[row].lowercased()
+    }
+    
+    
+    
+    func createToolbar() -> UIToolbar{
+        //toolbar
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //done button
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        
+        toolbar.setItems([doneBtn], animated: true)
+        
+        return toolbar
+    }
+    
+    
+    func createDatePicker() {
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        txt_field_datepicker.textAlignment = .center
+        txt_field_datepicker.inputView = datePicker
+        txt_field_datepicker.inputAccessoryView = createToolbar()
+    }
+    
+    @objc func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        
+        
+        self.txt_field_datepicker.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
     
     
     /*
@@ -64,3 +113,24 @@ class AddTaskViewController: UIViewController {
     */
 
 }
+
+extension AddTaskViewController: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return priorities.count
+    }
+    
+    
+}
+extension AddTaskViewController: UIPickerViewDelegate{
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return priorities[row]
+    }
+    
+}
+
+
