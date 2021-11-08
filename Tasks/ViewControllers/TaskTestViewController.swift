@@ -10,7 +10,7 @@ import UIKit
 class TaskTestViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
-    let myData = ["firt" , "second" , "htih" , "gahuifghuiagh"]
+    let myData = ["first" , "second" , "htih" , "gahuifghuiagh"]
     
     
     @IBOutlet var taskTableView: UITableView!
