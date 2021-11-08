@@ -58,7 +58,7 @@ class TableDifferentViewController: UIViewController,UITableViewDelegate, UITabl
         
         let task = tasksList[indexPath.row]
         
-        let alertController = UIAlertController(title: task.taskName, message: "example", preferredStyle: .alert)
+        let alertController = UIAlertController(title: task.taskName, message: "Are you sure you want to delete this?", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default){(_) in
             

@@ -35,6 +35,7 @@ class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var picker_priority: UIPickerView!
     
+    @IBOutlet weak var taskStatus: UILabel!
     @IBAction func btn_add_task_add(_ sender: UIButton) {
         
         
@@ -57,7 +58,20 @@ class AddTaskViewController: UIViewController {
         refTasks.child(key2!).setValue(task)
         
         print(task)
+        txt_field_datepicker.text! = ""
+        txt_field_add_task_name.text = ""
+        taskStatus.text = "Task Added Successfully!"
         
+        let delay = 0.5
+        perform(#selector(self.delayFunction), with: nil, afterDelay: delay)
+        
+        
+        
+        
+    }
+    
+    @objc func delayFunction(){
+        taskStatus.text = ""
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

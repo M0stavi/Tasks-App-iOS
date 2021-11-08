@@ -388,6 +388,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1s-ct-MzT">
+                                <rect key="frame" x="20" y="581" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yPT-vy-FpQ"/>
                         <color key="backgroundColor" red="0.1831039488" green="0.52619636059999997" blue="0.65153634549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -395,6 +402,7 @@
                     <navigationItem key="navigationItem" title="Add Task" id="gLS-5p-4QP"/>
                     <connections>
                         <outlet property="picker_priority" destination="YRn-AX-t5R" id="YOG-aw-BZy"/>
+                        <outlet property="taskStatus" destination="O1s-ct-MzT" id="3iw-Jj-Nez"/>
                         <outlet property="txt_field_add_task_name" destination="Srs-Qv-m96" id="asw-F0-9Qv"/>
                         <outlet property="txt_field_datepicker" destination="Nx4-Wl-EKh" id="fXP-1R-AqM"/>
                     </connections>
