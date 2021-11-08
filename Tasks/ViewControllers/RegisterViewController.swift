@@ -13,6 +13,8 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        txt_field_register_password.isSecureTextEntry = true
+        txt_field_register_confirm_password.isSecureTextEntry = true
 
         // Do any additional setup after loading the view.
     }
@@ -25,8 +27,7 @@ class RegisterViewController: UIViewController {
     
     func validateFields() -> String? {
         
-        txt_field_register_password.isSecureTextEntry = true
-        txt_field_register_confirm_password.isSecureTextEntry = true
+        
         if txt_field_register_email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || txt_field_register_password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             txt_field_register_confirm_password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
            {

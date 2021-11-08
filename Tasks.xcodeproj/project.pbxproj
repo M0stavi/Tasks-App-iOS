@@ -31,6 +31,8 @@
 		84E18FD52737DAC90021FF0F /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E18FD42737DAC90021FF0F /* ViewControllerTableViewCell.swift */; };
 		84E18FD72737DB4B0021FF0F /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E18FD62737DB4B0021FF0F /* MyModel.swift */; };
 		84E18FD92737E85E0021FF0F /* TableDifferentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E18FD82737E85E0021FF0F /* TableDifferentViewController.swift */; };
+		84EFF2F62739434E0009DC9D /* NavigationMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFF2F52739434E0009DC9D /* NavigationMainViewController.swift */; };
+		84EFF2F8273948280009DC9D /* FirstFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFF2F7273948280009DC9D /* FirstFirstViewController.swift */; };
 		84F959512736892B00A70523 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F959502736892B00A70523 /* TaskModel.swift */; };
 		84FD3B1227340C10005527D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD3B1127340C10005527D9 /* Constants.swift */; };
 		F83FED7380739520FB2F3361 /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2561C3061928E26F4108695 /* Pods_Tasks.framework */; };
@@ -65,6 +67,8 @@
 		84E18FD42737DAC90021FF0F /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		84E18FD62737DB4B0021FF0F /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		84E18FD82737E85E0021FF0F /* TableDifferentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDifferentViewController.swift; sourceTree = "<group>"; };
+		84EFF2F52739434E0009DC9D /* NavigationMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMainViewController.swift; sourceTree = "<group>"; };
+		84EFF2F7273948280009DC9D /* FirstFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFirstViewController.swift; sourceTree = "<group>"; };
 		84F959502736892B00A70523 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		84FD3B1127340C10005527D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2561C3061928E26F4108695 /* Pods_Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,8 @@
 				84E18FD42737DAC90021FF0F /* ViewControllerTableViewCell.swift */,
 				84E18FD62737DB4B0021FF0F /* MyModel.swift */,
 				84E18FD82737E85E0021FF0F /* TableDifferentViewController.swift */,
+				84EFF2F52739434E0009DC9D /* NavigationMainViewController.swift */,
+				84EFF2F7273948280009DC9D /* FirstFirstViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,12 +308,14 @@
 				8456EB17272EFF0F005C6246 /* HomeViewController.swift in Sources */,
 				84E18FD92737E85E0021FF0F /* TableDifferentViewController.swift in Sources */,
 				84A2F4FB27304012002CDC23 /* AboutViewController.swift in Sources */,
+				84EFF2F62739434E0009DC9D /* NavigationMainViewController.swift in Sources */,
 				8456EAD8272EC288005C6246 /* ViewController.swift in Sources */,
 				84A2F4F727303FA0002CDC23 /* SideMenu.swift in Sources */,
 				84028BE82733DF57001672B5 /* AddTaskViewController.swift in Sources */,
 				8456EAD4272EC288005C6246 /* AppDelegate.swift in Sources */,
 				8468889D2734F94F0035CE38 /* HourlyTableViewCell.swift in Sources */,
 				84F959512736892B00A70523 /* TaskModel.swift in Sources */,
+				84EFF2F8273948280009DC9D /* FirstFirstViewController.swift in Sources */,
 				8456EAE8272EEBBD005C6246 /* LeftMenuViewController.swift in Sources */,
 				84028BE52733DBE4001672B5 /* SignInViewController.swift in Sources */,
 				84FD3B1227340C10005527D9 /* Constants.swift in Sources */,

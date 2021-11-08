@@ -219,15 +219,22 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btn_signin:" destination="D2H-jf-TDe" eventType="touchUpInside" id="yIv-3G-C4M"/>
-                                    <segue destination="ZT1-LL-W4L" kind="presentation" modalPresentationStyle="fullScreen" id="LQi-lL-C2B"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfr-Fs-Dz5">
+                                <rect key="frame" x="52" y="713" width="328" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IPy-cK-4AX"/>
                         <color key="backgroundColor" red="0.1831039488" green="0.52619636059999997" blue="0.65153634549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="GK1-V6-gLc"/>
                     <connections>
+                        <outlet property="signInLabel" destination="Dfr-Fs-Dz5" id="zpy-Fk-JIi"/>
                         <outlet property="txt_field_signin_email" destination="sj1-Ox-Nj8" id="KZS-Gx-LPY"/>
                         <outlet property="txt_field_signin_password" destination="Oiq-b0-k96" id="Jdb-Vp-mPC"/>
                     </connections>
@@ -594,10 +601,10 @@
             </objects>
             <point key="canvasLocation" x="3976.811594202899" y="1170.5357142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Main View Controller-->
         <scene sceneID="blf-1e-gAy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZT1-LL-W4L" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavVc" automaticallyAdjustsScrollViewInsets="NO" id="ZT1-LL-W4L" customClass="NavigationMainViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ycd-52-z76"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QsC-KE-6Ia">
@@ -671,10 +678,10 @@
             </objects>
             <point key="canvasLocation" x="3061" y="1171"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--First First View Controller-->
         <scene sceneID="h0m-GB-VZw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fgk-pW-rfh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FirstNav" automaticallyAdjustsScrollViewInsets="NO" id="fgk-pW-rfh" customClass="FirstFirstViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jDn-b3-mlN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
